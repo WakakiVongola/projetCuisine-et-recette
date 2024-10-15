@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0ed4d5c1f3.js" crossorigin="anonymous"></script>
+    <title>Sup de cuisine</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./images/Recette01.webp" alt="">
+            <div>
+                <h1>Cherchez parmis plus de 1500 recettes du quotidien, simples et genereuses</h1>
+                <div class="search_box">
+                    <input type="text" placeholder="Recherchez une recette, un ingrédient, ...">
+                    <button><img src="./icones/search.svg" alt="bouton recherchez"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="filtre">
+            <div class="fieldsetDiv">
+                <div>
+                    <fieldset>
+                        <legend id="button_select_1">Appareils<i class="fa fa-arrow-down"></i></legend>
+                        <div class="fieldset_content">
+                            <input type="text" placeholder="Recherchez"><br>
+                            <label><input type="checkbox" name="appareils" value="Blender"> Blender</label><br>
+                            <label><input type="checkbox" name="appareils" value="Saladier"> Saladier</label><br>
+                            <label><input type="checkbox" name="appareils" value="Cocotte"> Cocotte</label><br>
+                            <label><input type="checkbox" name="appareils" value="Four"> Four</label><br>
+                            <label><input type="checkbox" name="appareils" value="Cuiseur de riz"> Cuiseur de
+                                riz</label><br>
+                            <label><input type="checkbox" name="appareils" value="Mixer"> Mixer</label><br>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend id="button_select_2">Ingrédients<i class="fa fa-arrow-down"></i></legend>
+                        <div class="fieldset_content">
+                            <input type="text" placeholder="Recherchez"><br>
+                            <label><input type="checkbox" name="ingredients" value="Lait de coco"> Lait de
+                                coco</label><br>
+                            <label><input type="checkbox" name="ingredients" value="Jus de citron"> Jus de
+                                citron</label><br>
+                            <label><input type="checkbox" name="ingredients" value="Sucre"> Sucre</label><br>
+                            <label><input type="checkbox" name="ingredients" value="Thon rouge"> Thon rouge</label><br>
+                            <label><input type="checkbox" name="ingredients" value="Concombre"> Concombre</label><br>
+                            <label><input type="checkbox" name="ingredients" value="Carotte"> Carotte</label><br>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend id="button_select_3">Ustensiles<i class="fa fa-arrow-down"></i></legend>
+                        <div class="fieldset_content">
+                            <input type="text" placeholder="Recherchez"><br>
+                            <label><input type="checkbox" name="ustensiles" value="Cuillère à soupe"> Cuillère à
+                                soupe</label><br>
+                            <label><input type="checkbox" name="ustensiles" value="Couteau"> Couteau</label><br>
+                            <label><input type="checkbox" name="ustensiles" value="Presse citron"> Presse
+                                citron</label><br>
+                            <label><input type="checkbox" name="ustensiles" value="Moule à tarte"> Moule à
+                                tarte</label><br>
+                            <label><input type="checkbox" name="ustensiles" value="Fouet"> Fouet</label><br>
+                            <label><input type="checkbox" name="ustensiles" value="Râpe à fromage"> Râpe à
+                                fromage</label><br>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+            <div>
+                <p>50 recettes</p>
+            </div>
+        </section>
+        <!-- the lists of filter here? -->
+        <section class="list_recettes">
+            <div class="list_recettes_div">
+                <img src="./images/Recette01.webp" alt="">
+                <div>
+                    <h2>Limonade de coco</h2>
+                    <h3>Recette</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quisquam fugit ipsa. Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Ipsam a mollitia saepe, modi eligendi
+                        impedit sunt veritatis deleniti temporibus laborum. Distinctio, voluptas?
+                        Voluptates vel consectetur dignissimos blanditiis asperiores facilis. Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Officiis aperiam porro corporis fugit praesentium delectus id
+                        error quidem, nihil similique, eaque voluptas? Quos voluptatum, numquam consequatur officiis
+                        maiores laborum blanditiis!
+                    </p>
+                    <h3>Ingrédients</h3>
+                    <div class="list_ingredients">
+                        <div>
+                            <p>Lait de coco</p>
+                            <label for="">400 ml</label>
+                        </div>
+                        <div>
+                            <p>Jus de citron</p>
+                            <label for="">2</label>
+                        </div>
+                        <div>
+                            <p>Crème de coco</p>
+                            <label for="">4 cuillères</label>
+                        </div>
+                        <div>
+                            <p>Sucre</p>
+                            <label for="">20 g</label>
+                        </div>
+                        <div>
+                            <p>Glaçons</p>
+                            <label for="">2</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list_recettes_div">
+                <img src="./images/Recette01.webp" alt="">
+                <div>
+                    <h2>Limonade de coco</h2>
+                    <h3>Recette</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quisquam fugit ipsa. Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Ipsam a mollitia saepe, modi eligendi
+                        impedit sunt veritatis deleniti exercitationem temporibus laborum. Distinctio, voluptas?
+                        Voluptates vel consectetur dignissimos blanditiis asperiores facilis. Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Officiis aperiam porro corporis fugit praesentium delectus id
+                        error quidem, nihil similique, eaque voluptas? Quos voluptatum, numquam consequatur officiis
+                        maiores laborum blanditiis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, velit
+                        excepturi. Veritatis hic cumque exercitationem? Voluptate nobis repudiandae tempora ducimus cum
+                        maiores ut rerum similique, voluptatum inventore commodi quia. Quis!
+                    </p>
+                    <h3>Ingrédients</h3>
+                    <div class="list_ingredients">
+                        <div>
+                            <p>Lait de coco</p>
+                            <label for="">400 ml</label>
+                        </div>
+                        <div>
+                            <p>Jus de citron</p>
+                            <label for="">2</label>
+                        </div>
+                        <div>
+                            <p>Crème de coco</p>
+                            <label for="">4 cuillères</label>
+                        </div>
+                        <div>
+                            <p>Sucre</p>
+                            <label for="">20 g</label>
+                        </div>
+                        <div>
+                            <p>Glaçons</p>
+                            <label for="">2</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list_recettes_div">
+                <img src="./images/Recette01.webp" alt="">
+                <div>
+                    <h2>Limonade de coco</h2>
+                    <h3>Recette</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quisquam fugit ipsa. Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Ipsam a mollitia saepe, modi eligendi
+                        impedit sunt Officiis aperiam porro corporis fugit praesentium delectus id
+                        error quidem, nihil similique, eaque voluptas? Quos voluptatum, numquam consequatur officiis
+                        maiores laborum blanditiis!
+                    </p>
+                    <h3>Ingrédients</h3>
+                    <div class="list_ingredients">
+                        <div>
+                            <p>Lait de coco</p>
+                            <label for="">400 ml</label>
+                        </div>
+                        <div>
+                            <p>Jus de citron</p>
+                            <label for="">2</label>
+                        </div>
+                        <div>
+                            <p>Crème de coco</p>
+                            <label for="">4 cuillères</label>
+                        </div>
+                        <div>
+                            <p>Sucre</p>
+                            <label for="">20 g</label>
+                        </div>
+                        <div>
+                            <p>Glaçons</p>
+                            <label for="">2</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+<script src="/script.js"></script>
+
+</html>

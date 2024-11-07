@@ -9,6 +9,27 @@
     --font-default: "Poppins", serif;
     --font-title: "Shrikhand", serif;
 } */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .balsamiq-sans-regular {
     font-family: "Balsamiq Sans", sans-serif;
     font-weight: 400;
@@ -56,6 +77,34 @@ p {
 }
 
 header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+    flex-grow: 1;
+    /* Fait en sorte que le nav prenne tout l'espace disponible */
+    text-align: center;
+    /* Centre le lien "Accueil" à l'intérieur du nav */
+}
+
+i {
+    display: flex;
+    /* Pour s'assurer que l'icône est bien alignée */
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    /* Retirer le soulignement par défaut */
+    font-size: 18px;
+    /* Ajuster la taille de la police si nécessaire */
+    color: black;
+    /* Modifier la couleur si nécessaire */
+}
+
+.search_image {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -117,16 +166,57 @@ header {
     }
 }
 
+.filtreList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 0px 20px;
+    grid-auto-rows: 1fr;
+
+    button {
+        padding: 5px 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: orangered;
+        border-radius: 5px;
+        color: white;
+
+        i {
+            color: #008766;
+        }
+    }
+}
+
 fieldset {
     border: none;
     padding: 5px;
     height: auto;
-    border:2px solid black;
+    border: 2px solid black;
     border-radius: 5px;
+    /* background-color: #FFD966; */
 
     .fieldset_content {
         display: none;
-        padding: 0 5px;
+        padding: 5px;
+        max-height: 150px;
+        /* Ajuste la hauteur selon tes besoins */
+        overflow-y: auto;
+        border-radius: 5px;
+        background-color: #FFD966;
+        .fieldset_content input {
+            width: 100%; /* La barre de recherche occupera toute la largeur */
+            box-sizing: border-box; /* Pour inclure les bordures et le padding dans la largeur */
+        }
+
+        div {
+            margin-top: 5px;
+            padding: 5px;
+            max-height: 80px;
+            /* Ajuste la hauteur pour afficher 4 lignes */
+            overflow-y: auto
+        }
     }
 
     /* .fieldset_content:hover {
@@ -145,7 +235,7 @@ fieldset {
 .filtre {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column-reverse;
     padding: 10px;
 }
 
@@ -153,7 +243,7 @@ fieldset {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
+
 }
 
 @media (min-width: 500px) {
@@ -161,13 +251,19 @@ fieldset {
         flex-direction: row;
         /* For larger screens */
     }
+    .filtre{
+        flex-direction: row;
+    }
+    .filtreList {
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 
 .list_recettes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding: 20px;
+    padding: 60px;
     grid-auto-rows: 1fr;
 }
 

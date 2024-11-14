@@ -1,3 +1,4 @@
+// main.js
 import { fetchRecipeList } from './data.js';
 import { updateListOfRecipes } from './ui.js';
 import { debounce } from './utils.js';
@@ -20,12 +21,29 @@ document.addEventListener("DOMContentLoaded", async () => {
   updateListOfRecipes(window.allRecipes);
 
   const searchInput = document.getElementById("big_search");
-  searchInput.addEventListener("input", debounce(() => {
-    const searchTerm = searchInput.value;
-    updateFilterContent(window.allRecipes, searchTerm);
-    updateListOfRecipes(window.allRecipes, searchTerm);
-  }, 300));
+  if (searchInput) {
+    searchInput.addEventListener("input", debounce(() => {
+      const searchTerm = searchInput.value;
+      updateFilterContent(window.allRecipes, searchTerm);
+      updateListOfRecipes(window.allRecipes, searchTerm);
+    }, 300));
+  }
+
+  const searchAppareils = document.getElementById("searchappareils");
+  const searchIngredients = document.getElementById("searchingredients");
+  const searchUstensiles = document.getElementById("searchustensiles");
+
+  if (searchAppareils) {
+    searchAppareils.addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
+  }
+  if (searchIngredients) {
+    searchIngredients.addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
+  }
+  if (searchUstensiles) {
+    searchUstensiles.addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
+  }
 });
+
 
 document.getElementById("searchappareils").addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
 document.getElementById("searchingredients").addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
@@ -45,3 +63,19 @@ document.querySelectorAll("legend").forEach(legend => {
     content.style.border = isVisible ? "unset" : "2px solid black";
   });
 })
+
+export async function initializeApp() {
+  window.allRecipes = await fetchRecipeList();
+  updateListOfRecipes(window.allRecipes);
+
+  document.getElementById("big_search").addEventListener("input", (event) => {
+    updateListOfRecipes(window.allRecipes, event.target.value);
+  });
+
+  document.getElementById("searchappareils").addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
+  document.getElementById("searchingredients").addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
+  document.getElementById("searchustensiles").addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
+}
+
+// Appel direct pour que l'application soit initialisée lors du chargement du fichier
+initializeApp();

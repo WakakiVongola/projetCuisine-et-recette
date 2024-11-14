@@ -1,4 +1,3 @@
-// main.js
 import { fetchRecipeList } from './data.js';
 import { updateListOfRecipes } from './ui.js';
 import { debounce } from './utils.js';
@@ -77,5 +76,4 @@ export async function initializeApp() {
   document.getElementById("searchustensiles").addEventListener("input", () => updateFilteredRecipes(window.allRecipes));
 }
 
-// Appel direct pour que l'application soit initialisée lors du chargement du fichier
 initializeApp();

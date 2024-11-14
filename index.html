@@ -4,25 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sup de cuisine</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./icones/search.svg" type="image/x-icon">
+    
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/0ed4d5c1f3.js" crossorigin="anonymous"></script>
-    <title>Sup de cuisine</title>
 </head>
 
 <body>
     <main>
         <section class="search_image">
             <div>
-                <img src="./images/Recette01.webp" alt="">
+                <img src="./images/Recette01.webp" alt="Image d'une recette">
                 <div>
-                    <h1>Cherchez parmis plus de 1500 recettes du quotidien, simples et genereuses</h1>
+                    <h1>Cherchez parmi plus de 1500 recettes du quotidien, simples et généreuses</h1>
                     <div class="search_box" id="search_box">
-                        <input id="big_search" placeholder="Recherchez une recette, un ingrédient, ...">
-                        <button><img src="./icones/search.svg" alt="bouton recherchez"></button>
+                        <input id="big_search" placeholder="Recherchez une recette, un ingrédient, ..." aria-label="Recherche">
+                        <button aria-label="Rechercher"><img src="./icones/search.svg" alt="Bouton rechercher"></button>
                     </div>
                 </div>
             </div>
@@ -33,9 +41,9 @@
                     <fieldset>
                         <legend id="button_select_1">Appareils<i class="fa fa-arrow-down"></i></legend>
                         <div class="fieldset_content">
-                            <input id="searchappareils" type="text" placeholder="Recherchez"><br>
+                            <input id="searchappareils" type="text" placeholder="Recherchez" aria-label="Rechercher un appareil"><br>
                             <div id="appareilsList">
-                                <!-- the JS works here -->
+                                <!-- Liste des filtres générée par JavaScript -->
                             </div>
                         </div>
                     </fieldset>
@@ -44,9 +52,9 @@
                     <fieldset>
                         <legend id="button_select_2">Ingrédients<i class="fa fa-arrow-down"></i></legend>
                         <div class="fieldset_content">
-                            <input id="searchingredients" type="text" placeholder="Recherchez"><br>
+                            <input id="searchingredients" type="text" placeholder="Recherchez" aria-label="Rechercher un ingrédient"><br>
                             <div id="ingredientsList">
-                                <!-- the JS works here -->
+                                <!-- Liste des filtres générée par JavaScript -->
                             </div>
                         </div>
                     </fieldset>
@@ -55,142 +63,26 @@
                     <fieldset>
                         <legend id="button_select_3">Ustensiles<i class="fa fa-arrow-down"></i></legend>
                         <div class="fieldset_content">
-                            <input id="searchustensiles" type="text" placeholder="Recherchez"><br>
+                            <input id="searchustensiles" type="text" placeholder="Recherchez" aria-label="Rechercher un ustensile"><br>
                             <div id="ustensilesList">
-                                <!-- the JS works here -->
+                                <!-- Liste des filtres générée par JavaScript -->
                             </div>
                         </div>
                     </fieldset>
                 </div>
-
             </div>
-            <div id="numberOfRecipes">
+            <div id="numberOfRecipes" aria-live="polite">
+                <!-- Compteur de recettes -->
             </div>
         </section>
-
-        <!-- the lists of filter here? -->
-        <section class="filtreList" id="filterList">
+        <section class="filtreList" id="filterList" aria-label="Filtres sélectionnés">
+            <!-- Listes des filtres sélectionnés -->
         </section>
-        <section class="list_recettes" id="recipesListContainer">
-            <!-- <div class="list_recettes_div">
-                <img src="./images/Recette01.webp" alt="">
-                <div>
-                    <h2>Limonade de coco</h2>
-                    <h3>Recette</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quisquam fugit ipsa. Lorem
-                        ipsum dolor sit amet, consectetur adipisicing elit. Ipsam a mollitia saepe, modi eligendi
-                        impedit sunt veritatis deleniti temporibus laborum. Distinctio, voluptas?
-                        Voluptates vel consectetur dignissimos blanditiis asperiores facilis. Lorem ipsum, dolor sit
-                        amet consectetur adipisicing elit. Officiis aperiam porro corporis fugit praesentium delectus id
-                        error quidem, nihil similique, eaque voluptas? Quos voluptatum, numquam consequatur officiis
-                        maiores laborum blanditiis!
-                    </p>
-                    <h3>Ingrédients</h3>
-                    <div class="list_ingredients">
-                        <div>
-                            <p>Lait de coco</p>
-                            <label for="">400 ml</label>
-                        </div>
-                        <div>
-                            <p>Jus de citron</p>
-                            <label for="">2</label>
-                        </div>
-                        <div>
-                            <p>Crème de coco</p>
-                            <label for="">4 cuillères</label>
-                        </div>
-                        <div>
-                            <p>Sucre</p>
-                            <label for="">20 g</label>
-                        </div>
-                        <div>
-                            <p>Glaçons</p>
-                            <label for="">2</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="list_recettes_div">
-                <img src="./images/Recette01.webp" alt="">
-                <div>
-                    <h2>Limonade de coco</h2>
-                    <h3>Recette</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quisquam fugit ipsa. Lorem
-                        ipsum dolor sit amet, consectetur adipisicing elit. Ipsam a mollitia saepe, modi eligendi
-                        impedit sunt veritatis deleniti exercitationem temporibus laborum. Distinctio, voluptas?
-                        Voluptates vel consectetur dignissimos blanditiis asperiores facilis. Lorem ipsum, dolor sit
-                        amet consectetur adipisicing elit. Officiis aperiam porro corporis fugit praesentium delectus id
-                        error quidem, nihil similique, eaque voluptas? Quos voluptatum, numquam consequatur officiis
-                        maiores laborum blanditiis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, velit
-                        excepturi. Veritatis hic cumque exercitationem? Voluptate nobis repudiandae tempora ducimus cum
-                        maiores ut rerum similique, voluptatum inventore commodi quia. Quis!
-                    </p>
-                    <h3>Ingrédients</h3>
-                    <div class="list_ingredients">
-                        <div>
-                            <p>Lait de coco</p>
-                            <label for="">400 ml</label>
-                        </div>
-                        <div>
-                            <p>Jus de citron</p>
-                            <label for="">2</label>
-                        </div>
-                        <div>
-                            <p>Crème de coco</p>
-                            <label for="">4 cuillères</label>
-                        </div>
-                        <div>
-                            <p>Sucre</p>
-                            <label for="">20 g</label>
-                        </div>
-                        <div>
-                            <p>Glaçons</p>
-                            <label for="">2</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="list_recettes_div">
-                <img src="./images/Recette01.webp" alt="">
-                <div>
-                    <h2>Limonade de coco</h2>
-                    <h3>Recette</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quisquam fugit ipsa. Lorem
-                        ipsum dolor sit amet, consectetur adipisicing elit. Ipsam a mollitia saepe, modi eligendi
-                        impedit sunt Officiis aperiam porro corporis fugit praesentium delectus id
-                        error quidem, nihil similique, eaque voluptas? Quos voluptatum, numquam consequatur officiis
-                        maiores laborum blanditiis!
-                    </p>
-                    <h3>Ingrédients</h3>
-                    <div class="list_ingredients">
-                        <div>
-                            <p>Lait de coco</p>
-                            <label for="">400 ml</label>
-                        </div>
-                        <div>
-                            <p>Jus de citron</p>
-                            <label for="">2</label>
-                        </div>
-                        <div>
-                            <p>Crème de coco</p>
-                            <label for="">4 cuillères</label>
-                        </div>
-                        <div>
-                            <p>Sucre</p>
-                            <label for="">20 g</label>
-                        </div>
-                        <div>
-                            <p>Glaçons</p>
-                            <label for="">2</label>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+        <section class="list_recettes" id="recipesListContainer" aria-label="Liste des recettes">
+            <!-- Liste des recettes générée par JavaScript -->
         </section>
     </main>
+    <script type="module" src="main.js"></script>
 </body>
-<script type="module" src="main.js"></script>
+
 </html>
